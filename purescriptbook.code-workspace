@@ -51,13 +51,20 @@
       "**/CVS": true,
       "**/.DS_Store": true,
       "exercises": true
-    }
+    },
+    "terminal.integrated.profiles.linux": {
+        "Nix Shell": {
+          "path": "nix-shell",
+          "icon": "terminal-linux",
+        },
+      },
+    "terminal.integrated.defaultProfile.linux": "Nix Shell"
   },
   "extensions": {
     "recommendations": [
-      "nwolverson.ide-purescript",
-      "nwolverson.language-purescript",
-      "mvakula.vscode-purty"
+      "emattiza.ide-purescript",
+      "emattiza.language-purescript",
+      "emattiza.vscode-purty"
     ]
   }
 }

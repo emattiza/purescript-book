@@ -11,7 +11,7 @@ let
   };
 in
   stdenv.mkDerivation {
-    name = "purescript-ulid";
+    name = "purescript-book";
 
     buildInputs = [
       easy-ps.purs
