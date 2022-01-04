@@ -8,7 +8,7 @@ github:
 
 tasks:
   - name: Start Nix Shell
-    init: nix-shell
+    init: nix-shell --run "purs --version"
 
 vscode:
   extensions:
