@@ -1,3 +1,4 @@
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/emattiza/purescript-book)
 # PureScript by Example
 
 This repository contains a [community fork](https://github.com/purescript-contrib/purescript-book/) of _PureScript by Example_ by Phil Freeman, also known as "the PureScript book". This version differs from the original in that it has been updated so that the code and exercises work with up-to-date versions of the compiler, libraries, and tools. Some chapters have also been rewritten to showcase the latest features of the PureScript ecosystem.
