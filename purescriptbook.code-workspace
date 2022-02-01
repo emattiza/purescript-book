@@ -4,6 +4,9 @@
       "path": "."
     },
     {
+      "path": "scripts/"
+    },
+    {
       "path": "exercises/chapter2"
     },
     {
@@ -58,7 +61,8 @@
           "icon": "terminal-linux",
         },
       },
-    "terminal.integrated.defaultProfile.linux": "Nix Shell"
+    "terminal.integrated.defaultProfile.linux": "Nix Shell",
+    "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix"
   },
   "extensions": {
     "recommendations": [
