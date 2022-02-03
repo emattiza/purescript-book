@@ -5,16 +5,14 @@ module TestAll
 
 import Prelude
 
-import Data.Array (filterA)
 import Data.Foldable (intercalate)
 import Data.Maybe (Maybe(..))
 import Data.Traversable (traverse)
 import Effect (Effect)
 import Effect.Console (log)
 import Node.ChildProcess (ExecSyncOptions, defaultExecSyncOptions, execSync)
-import Node.FS.Stats (isDirectory)
-import Node.FS.Sync (readdir, realpath, stat)
-import Node.Path (FilePath, concat, normalize)
+import Node.Path (FilePath)
+import Utils (isPathDirectory, readPathFor)
 
 main :: Effect Unit
 main = do
@@ -24,14 +22,9 @@ main = do
     -- Spawn spago test in all exercise directories
     spawnAllTests contents
 
+
 readExercises :: Effect (Array FilePath)
-readExercises = do
-  exercises <- cleanPath "../exercises/"
-  items <- readdir exercises
-  let items_abs_path = (makeAbs exercises) <$> items
-  -- filter readdir for only directories
-  all_dirs <- filterA isPathDirectory items_abs_path
-  pure $ all_dirs
+readExercises = readPathFor isPathDirectory "../exercises/"
 
 spawnAllTests :: Array FilePath -> Effect Unit
 spawnAllTests testDirs = do
@@ -49,14 +42,3 @@ spawnTest workingDir = do
 
 spawnTests :: Array FilePath -> Effect (Array Unit)
 spawnTests = traverse (\testDir -> spawnTest testDir)
-
-cleanPath :: String -> Effect FilePath
-cleanPath = realpath <<< normalize
-
-makeAbs :: String -> String -> FilePath
-makeAbs basePath item = concat [basePath, item]
-
-isPathDirectory :: FilePath -> Effect Boolean
-isPathDirectory path = do
-  pathStats <- stat path
-  pure $ isDirectory pathStats

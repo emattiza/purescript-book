@@ -11,9 +11,7 @@ You can edit this file as you like.
   , "node-fs"
   , "node-child-process"
   , "arrays"
-  , "parallel"
   , "maybe"
-  , "integers"
   , "prelude"
   ]
 , packages = ./packages.dhall
