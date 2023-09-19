@@ -62,9 +62,9 @@
   },
   "extensions": {
     "recommendations": [
-      "emattiza.ide-purescript",
-      "emattiza.language-purescript",
-      "emattiza.vscode-purty"
+      "nwolverson.ide-purescript",
+      "nwolverson.language-purescript",
+      "mvakula.vscode-purty"
     ]
   }
 }

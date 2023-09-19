@@ -12,6 +12,6 @@ tasks:
 
 vscode:
   extensions:
-    - emattiza.ide-purescript
+    - nwolverson.ide-purescript
     - emattiza.vscode-purty
-    - emattiza.language-purescript
+    - nwolverson.language-purescript
