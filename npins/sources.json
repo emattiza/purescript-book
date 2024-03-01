@@ -1,0 +1,23 @@
+{
+  "pins": {
+    "easy-purescript-nix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "justinwoo",
+        "repo": "easy-purescript-nix"
+      },
+      "branch": "master",
+      "revision": "d5fe5f4b210a0e4bac42ae0c159596a49c5eb016",
+      "url": "https://github.com/justinwoo/easy-purescript-nix/archive/d5fe5f4b210a0e4bac42ae0c159596a49c5eb016.tar.gz",
+      "hash": "1fbnq9nhyq75d6jd7d9xs0xnnf30x6yl5p0limj432y5zyly3lbb"
+    },
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixpkgs-unstable",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-24.05pre589918.ebe6e807793e/nixexprs.tar.xz",
+      "hash": "00kq9whnk7d28wamhr85c490cn81c4mlvxsy4cijk4cwjb3dl7hr"
+    }
+  },
+  "version": 3
+}

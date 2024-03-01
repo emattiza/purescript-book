@@ -1,16 +1,9 @@
-with import <nixpkgs> {};
-
 let
-  easy-ps = import (fetchFromGitHub {
-    owner = "justinwoo";
-    repo = "easy-purescript-nix";
-    rev = "5dcea83eecb56241ed72e3631d47e87bb11e45b9";
-    hash = "sha256-jUuy2OzmxegEn0KT3u1uf87eGGA33+of9HodIqS3PLY=";
-  }) {
-    inherit pkgs;
-  };
+  sources = import ./npins;
+  pkgs = import sources.nixpkgs {};
+  easy-ps = import sources.easy-purescript-nix {inherit pkgs;};
 in
-  stdenv.mkDerivation {
+  pkgs.stdenv.mkDerivation {
     name = "purescript-book";
 
     buildInputs = [
@@ -18,6 +11,7 @@ in
       easy-ps.spago
       easy-ps.pulp
       easy-ps.purescript-language-server
-      yarn
+      pkgs.npins
+      pkgs.yarn
     ];
   }
