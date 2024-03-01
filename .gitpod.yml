@@ -1,11 +1,3 @@
-github:
-  prebuilds:
-    main: true
-    branches: true
-    pullRequests: true
-    addCheck: true
-    addComment: true
-
 tasks:
   - name: Start Nix Shell
     init: nix-shell --run "purs --version"

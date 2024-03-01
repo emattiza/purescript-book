@@ -13,5 +13,6 @@ in
       easy-ps.purescript-language-server
       pkgs.npins
       pkgs.yarn
+      pkgs.mdbook
     ];
   }
